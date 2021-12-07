@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations XML_version="1.2" id="configurations_0">
+        
+    <configuration XML_version="1.2" id="configuration_0">
+                
+        <instance XML_version="1.2" desc="SEGGER J-Link Emulator" href="connections/segger_j-link_connection.xml" id="SEGGER J-Link Emulator" xml="segger_j-link_connection.xml" xmlpath="connections"/>
+                
+        <connection XML_version="1.2" id="SEGGER J-Link Emulator">
+                        
+            <instance XML_version="1.2" href="drivers/JLINKicepick_c.xml" id="drivers" xml="JLINKicepick_c.xml" xmlpath="drivers"/>
+                        
+            <instance XML_version="1.2" href="drivers/jlinkcs_dap.xml" id="drivers" xml="jlinkcs_dap.xml" xmlpath="drivers"/>
+                        
+            <instance XML_version="1.2" href="drivers/jlinkcortexm3.xml" id="drivers" xml="jlinkcortexm3.xml" xmlpath="drivers"/>
+                        
+            <platform XML_version="1.2" id="platform_0">
+                                
+                <instance XML_version="1.2" desc="CC1310F32" href="devices/cc1310f32.xml" id="CC1310F32" xml="cc1310f32.xml" xmlpath="devices"/>
+                            
+                <device HW_revision="1" XML_version="1.2" description="SimpleLink(TM) Sub-1 GHz CC1310 wireless MCU" id="CC1310F32" partnum="CC1310F32">
+                    <router HW_revision="1.0" XML_version="1.2" description="ICEPick_C Router" id="IcePick_C_0" isa="ICEPICK_C">
+                        <subpath id="subpath_0">
+                            <router HW_revision="1.0" XML_version="1.2" description="CS_DAP Router" id="CS_DAP_0" isa="CS_DAP">
+                                <subpath id="subpath_1">
+                                    <cpu HW_revision="1.0" XML_version="1.2" description="Cortex_M3 CPU" id="Cortex_M3_0" isa="Cortex_M3">
+                                        <property Type="choicelist" Value="2" id="Target Interface Type"/>
+                                    </cpu>
+                                </subpath>
+                            </router>
+                        </subpath>
+                    </router>
+                </device>
+            </platform>
+                    
+        </connection>
+            
+    </configuration>
+    
+</configurations>
