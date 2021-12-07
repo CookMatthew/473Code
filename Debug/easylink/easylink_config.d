@@ -27,9 +27,9 @@ easylink/easylink_config.obj: C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/d
 easylink/easylink_config.obj: C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/devices/cc13x0/driverlib/rf_ble_cmd.h
 easylink/easylink_config.obj: C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdlib.h
 easylink/easylink_config.obj: ../easylink/easylink_config.h
-easylink/easylink_config.obj: C:/Users/pr3de/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/Board.h
+easylink/easylink_config.obj: C:/Users/justi/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/Board.h
 easylink/easylink_config.obj: C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/drivers/Board.h
-easylink/easylink_config.obj: C:/Users/pr3de/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/CC1310_LAUNCHXL.h
+easylink/easylink_config.obj: C:/Users/justi/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/CC1310_LAUNCHXL.h
 easylink/easylink_config.obj: C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/drivers/PIN.h
 easylink/easylink_config.obj: C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/devices/cc13x0/driverlib/ioc.h
 easylink/easylink_config.obj: C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/devices/cc13x0/inc/hw_types.h
@@ -45,8 +45,8 @@ easylink/easylink_config.obj: C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/d
 easylink/easylink_config.obj: C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/devices/cc13x0/driverlib/rom.h
 easylink/easylink_config.obj: C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/devices/cc13x0/driverlib/gpio.h
 easylink/easylink_config.obj: C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/devices/cc13x0/inc/hw_gpio.h
-easylink/easylink_config.obj: C:/Users/pr3de/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/smartrf_settings/smartrf_settings.h
-easylink/easylink_config.obj: C:/Users/pr3de/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/smartrf_settings/smartrf_settings_predefined.h
+easylink/easylink_config.obj: C:/Users/justi/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/smartrf_settings/smartrf_settings.h
+easylink/easylink_config.obj: C:/Users/justi/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/smartrf_settings/smartrf_settings_predefined.h
 easylink/easylink_config.obj: C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/devices/cc13x0/driverlib/rf_hs_mailbox.h
 easylink/easylink_config.obj: C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/devices/cc13x0/driverlib/rf_hs_cmd.h
 
@@ -104,11 +104,11 @@ C:/ti/ccs1100/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdlib.h:
 
 ../easylink/easylink_config.h:
 
-C:/Users/pr3de/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/Board.h:
+C:/Users/justi/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/Board.h:
 
 C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/drivers/Board.h:
 
-C:/Users/pr3de/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/CC1310_LAUNCHXL.h:
+C:/Users/justi/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/CC1310_LAUNCHXL.h:
 
 C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/drivers/PIN.h:
 
@@ -140,9 +140,9 @@ C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/devices/cc13x0/driverlib/gpio.h
 
 C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/devices/cc13x0/inc/hw_gpio.h:
 
-C:/Users/pr3de/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/smartrf_settings/smartrf_settings.h:
+C:/Users/justi/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/smartrf_settings/smartrf_settings.h:
 
-C:/Users/pr3de/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/smartrf_settings/smartrf_settings_predefined.h:
+C:/Users/justi/workspace_v11/rfEasyLinkEchoRx_CC1310_LAUNCHXL_nortos_ccs/smartrf_settings/smartrf_settings_predefined.h:
 
 C:/ti/simplelink_cc13x0_sdk_4_20_01_03/source/ti/devices/cc13x0/driverlib/rf_hs_mailbox.h:
 

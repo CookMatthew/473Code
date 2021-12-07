@@ -128,6 +128,9 @@ void echoRxDoneCb(EasyLink_RxPacket * rxPacket, EasyLink_Status status)
 #include <ti/drivers/i2c/I2CCC26xx.h>
 #include "board.h"
 #define USB_ADDR 0x22
+#define IMU_ADDR 0x69
+#define ALT_ADDR 0x76
+#define EXPAND_ADDR 0x22
 
 void *mainThread(void *arg0)
 {
@@ -184,6 +187,32 @@ void *mainThread(void *arg0)
         return NULL;
         // Transaction failed
     }
+
+    // IMU Transaction
+    int x;
+    for (x = 59; x < 73; x++){
+        txBuffer[0] = x; //Tx data
+
+        i2cTransaction.slaveAddress = IMU_ADDR; //device address
+        i2cTransaction.writeBuf = txBuffer;
+        i2cTransaction.writeCount = 1; //number of bytes to send
+        i2cTransaction.readBuf = rxBuffer; //memory location to save read data
+        i2cTransaction.readCount = 1; //num of bytes to save
+
+        if (I2C_transfer(i2c, &i2cTransaction)) {
+                // Transaction was a success, handle the data
+            }
+        else {
+            I2C_close(i2c);
+            return NULL;
+            // Transaction failed
+        }
+    }
+
+
+
+
+
 
     /* Deinitialized I2C */
     I2C_close(i2c);
