@@ -210,10 +210,6 @@ void *mainThread(void *arg0)
     }
 
 
-
-
-
-
     /* Deinitialized I2C */
     I2C_close(i2c);
 

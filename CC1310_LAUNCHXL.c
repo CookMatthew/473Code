@@ -1035,7 +1035,7 @@ void CC1310_LAUNCHXL_initGeneral(void)
     }
 
     /* Perform board-specific initialization */
-    Board_initHook();
+    //Board_initHook();
 }
 
 /*
