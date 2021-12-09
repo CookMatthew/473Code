@@ -377,10 +377,57 @@ int main(void)
 	result = 0;
 	HAL_UART_Transmit(&huart1,msg,12,100);
 	HAL_Delay(1000);
+
+	// BMP Temp and Pressure Sensor
+	// Temp read MSB to XLSB
 	HAL_I2C_Mem_Read(&hi2c1,BMP_ADDR,0xFA,1,&result,1,100);
 	HAL_I2C_Mem_Read(&hi2c1,BMP_ADDR,0xFB,1,&result,1,100);
 	HAL_I2C_Mem_Read(&hi2c1,BMP_ADDR,0xFC,1,&result,1,100);
+<<<<<<< HEAD
 	*/
+=======
+	// Pressure read MSB to XLSB
+	HAL_I2C_Mem_Read(&hi2c1,BMP_ADDR,0xF7,1,&result,1,100);
+	HAL_I2C_Mem_Read(&hi2c1,BMP_ADDR,0xF8,1,&result,1,100);
+	HAL_I2C_Mem_Read(&hi2c1,BMP_ADDR,0xF9,1,&result,1,100);
+
+	//BNO IMU MSB to LSB
+	//Set UNIT_SEL register to desired values
+	result = 0x10;
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x3B,1,&result,1,100);
+	result = 0;
+	//Gyro read
+	//X
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x15,1,&result,1,100);
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x14,1,&result,1,100);
+	//Y
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x17,1,&result,1,100);
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x16,1,&result,1,100);
+	//Z
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x19,1,&result,1,100);
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x18,1,&result,1,100);
+	//Accel read
+	//X
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x09,1,&result,1,100);
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x08,1,&result,1,100);
+	//Y
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x0B,1,&result,1,100);
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x0A,1,&result,1,100);
+	//Z
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x0D,1,&result,1,100);
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x0C,1,&result,1,100);
+	//Magnetometer read
+	//X
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0xFF,1,&result,1,100);
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0xFE,1,&result,1,100);
+	//Y
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x11,1,&result,1,100);
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x10,1,&result,1,100);
+	//Z
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x13,1,&result,1,100);
+	HAL_I2C_Mem_Read(&hi2c1,BNO_ADDR,0x12,1,&result,1,100);
+
+>>>>>>> 1b81c390f2360e11607f38506435b1dab2db4b2b
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

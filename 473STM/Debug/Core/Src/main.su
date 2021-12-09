@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 main.c:89:7:intToChar	16	static
 main.c:107:6:readBMP	4	static
 main.c:123:6:readBNO	64	static,ignoring_inline_asm
@@ -16,3 +17,11 @@ main.c:530:13:MX_USART1_UART_Init	8	static
 main.c:565:13:MX_GPIO_Init	40	static
 main.c:586:6:HAL_TIM_PeriodElapsedCallback	24	static
 main.c:616:6:Error_Handler	4	static,ignoring_inline_asm
+=======
+main.c:70:5:main	40	static
+main.c:167:6:SystemClock_Config	96	static
+main.c:211:13:MX_I2C1_Init	8	static
+main.c:257:13:MX_USART1_UART_Init	8	static
+main.c:292:13:MX_GPIO_Init	40	static
+main.c:319:6:Error_Handler	4	static,ignoring_inline_asm
+>>>>>>> 1b81c390f2360e11607f38506435b1dab2db4b2b
