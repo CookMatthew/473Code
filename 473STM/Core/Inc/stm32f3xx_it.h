@@ -37,7 +37,7 @@
 
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
-
+ Process* currentProcess;
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/

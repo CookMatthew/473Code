@@ -36,6 +36,33 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
+#define STACK_SIZE 1000/4
+typedef enum state {
+	ACTIVE, TERMINATED, BLOCKED
+} State;
+
+typedef struct process{
+	volatile void* stackTop;
+	State currentState;
+	volatile uint32_t stack[STACK_SIZE];
+	volatile int delay;
+} Process;
+
+#define BUF_SIZE 1000
+
+typedef enum {true, false} bool;
+
+typedef struct memoryBuffer {
+	volatile bool sent;
+	volatile bool received;
+	char msg[BUF_SIZE];
+	uint32_t bufLen;
+} MemBuf;
+
+#define NUM_PROC 8
+
+Process processes[NUM_PROC];
+
 
 /* USER CODE END ET */
 
@@ -53,7 +80,8 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+void contextSwap(void);
+void schedule(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

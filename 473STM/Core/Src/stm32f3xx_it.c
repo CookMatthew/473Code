@@ -31,6 +31,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define portNVIC_INT_CTRL_REG		( * ( ( volatile uint32_t * ) 0xe000ed04 ) )
+#define portNVIC_PENDSVSET_BIT		( 1UL << 28UL )
+
 
 /* USER CODE END PD */
 
@@ -167,15 +170,45 @@ void DebugMon_Handler(void)
 /**
   * @brief This function handles Pendable request for system service.
   */
-void PendSV_Handler(void)
-{
+//void PendSV_Handler(void)
+//{
   /* USER CODE BEGIN PendSV_IRQn 0 */
+	//portNVIC_INT_CTRL_REG &= (~portNVIC_PENDSVSET_BIT);
+	//__disable_irq();
+	/*
+		__asm volatile
+		        (
+		        "mrs r0, psp \n"
+		        "ldr r3, currentContext \n"
+		        "ldr r2, [r3] \n"
+		        "stmdb r0!, {r4-r11, r14} \n"
+		        "str r0, [r2] \n"
+		    );
+		schedule();
+		//__enable_irq();
+		__asm volatile
+			    (
+			    "ldr r3, currentContext \n"
+			    "ldr r1, [r3] \n"
+			    "ldr r0, [r1] \n"
+			    "ldmia r0!, {r4-r11, r14} \n"
+			    "msr psp, r0 \n"
+			    "isb \n"
+			    "currentContext: .word currentProcess \n"
+			);
+		//return;
+		__asm volatile
+				(
+				"bx r14 \n"
+		);
+	*/
+	//contextSwap();
 
   /* USER CODE END PendSV_IRQn 0 */
   /* USER CODE BEGIN PendSV_IRQn 1 */
 
   /* USER CODE END PendSV_IRQn 1 */
-}
+//}
 
 /**
   * @brief This function handles System tick timer.
@@ -183,6 +216,17 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
+	portNVIC_INT_CTRL_REG = portNVIC_PENDSVSET_BIT;
+
+	for(int j = 0; j < NUM_PROC; j++) {
+		if(processes[j].currentState == BLOCKED) {
+		  	processes[j].delay--;
+			if(processes[j].delay == 0) {
+		  		processes[j].currentState = ACTIVE;
+		  	}
+		}
+	}
+
 
   /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();
