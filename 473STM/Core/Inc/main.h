@@ -36,7 +36,7 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-#define STACK_SIZE 1000/4
+#define STACK_SIZE 150
 typedef enum state {
 	ACTIVE, TERMINATED, BLOCKED
 } State;
@@ -48,7 +48,7 @@ typedef struct process{
 	volatile int delay;
 } Process;
 
-#define BUF_SIZE 1000
+#define BUF_SIZE 200
 
 typedef enum {true, false} bool;
 
@@ -59,7 +59,7 @@ typedef struct memoryBuffer {
 	uint32_t bufLen;
 } MemBuf;
 
-#define NUM_PROC 8
+#define NUM_PROC 10
 
 Process processes[NUM_PROC];
 
